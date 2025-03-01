@@ -22,11 +22,15 @@
         <i class="fas fa-search"></i>
         <input type="text" placeholder="Search our store">
       </div>
+      <div class="user-icon">
+        <a href="login.html">Log in</a><i class="fas fa-user"></i>
+      </div>
       <div class="cart">
         <a href="#"><i class="fas fa-shopping-cart"></i>Your cart</a>
         <p>0.00$</p>
       </div>
     </div>
+    <hr class="frist-line">
     <nav class="menu">
       <ul>
         <li>
@@ -59,45 +63,293 @@
                     <li class="breadcrumb-item">
                         <a href="index.html">HOME</a>
                     </li>
-                    <li class="breadcrumb-item-active" aria-current="page"> Products</li>
+                    <li class="breadcrumb-item-active" aria-current="page">Shop</li>
                 </ol>
             </nav>
         </div>
     </div>
-    <div class="product-grid">
-      <div class="filters">
-        <div class="availability">
-          <label>Availability</label>
+    <div class="container--1">
+      <aside class="sidebar">
+        <div class="filter-section">
+          <input type="checkbox" id="availability" class="dropdown-toggle">
+          <label for="availability" class="dropdown-title">Availability</label>
+          <div class="dropdown-content">
+            <label><input type="checkbox">in Stock <span class="Stock">(15)</span></label>
+          <label><input type="checkbox">out of Stock <span class="Stock">(7)</span></label>
+          </div>
+        </div>
+        <div class="filter-section">
+          <label for="price" class="dropdown-title">Price</label>
+          <div class="price-row">
+          <div class="price-low"><label for="price-low">From $</label>
+            <input class="price-selector" type="number" placeholder="0" min="0" max="110">
+          </div>
+          <div class="price-high"><label for="price-high">To $</label>
+            <input class="price-selector" type="number" placeholder="110" min="0" max="110">
+          </div>
+          </div>
+          <button class="filter-button"><span>Filter</span></button>
+        </div>
+        <div class="filter-section">
+          <input type="checkbox" id="type" class="dropdown-toggle">
+          <label for="type" class="dropdown-title">Product Type</label>
+          <div class="dropdown-content">
+          <label><input type="checkbox">Type A <span class="Stock">(10)</span></label>
+          <label><input type="checkbox">Type B <span class="Stock">(5)</span></label>
+          <label><input type="checkbox">Type C <span class="Stock">(9)</span></label>
+          <label><input type="checkbox">Type D <span class="Stock">(5)</span></label>
+          <label><input type="checkbox">Type E <span class="Stock">(9)</span></label>
+          <label><input type="checkbox">Type F <span class="Stock">(8)</span></label>
+          <label><input type="checkbox">Type G <span class="Stock">(3)</span></label>
+          <label><input type="checkbox">Type H <span class="Stock">(4)</span></label>
+          <label><input type="checkbox">Type I <span class="Stock">(1)</span></label>
+          <label><input type="checkbox">Type J <span class="Stock">(9)</span></label>
+          <label><input type="checkbox">Type K <span class="Stock">(4)</span></label>
+          <label><input type="checkbox">Type L <span class="Stock">(3)</span></label>
+          </div>
+        </div>
+        <div class="filter-section">
+          <input type="checkbox" id="Brand" class="dropdown-toggle">
+          <label for="Brand" class="dropdown-title">Brand</label>
+          <div class="dropdown-content">
+          <label><input type="checkbox">Fiama-demo <span class="Stock">(13)</span></label>
+          <label><input type="checkbox">Vendor A <span class="Stock">(1)</span></label>
+          <label><input type="checkbox">Vendor B <span class="Stock">(4)</span></label>
+          <label><input type="checkbox">Vendor C <span class="Stock">(3)</span></label>
+          <label><input type="checkbox">Vendor D <span class="Stock">(2)</span></label>
+          <label><input type="checkbox">Vendor E <span class="Stock">(7)</span></label>
+          <label><input type="checkbox">Vendor F <span class="Stock">(8)</span></label>
+          <label><input type="checkbox">Vendor G <span class="Stock">(9)</span></label>
+          <label><input type="checkbox">Vendor H <span class="Stock">(5)</span></label>
+          <label><input type="checkbox">Vendor I <span class="Stock">(8)</span></label>
+          <label><input type="checkbox">Vendor J <span class="Stock">(6)</span></label>
+          <label><input type="checkbox">Vendor K <span class="Stock">(7)</span></label>
+          <label><input type="checkbox">Vendor L <span class="Stock">(10)</span></label>
+          </div>
+        </div>
+        <div class="filter-section">
+          <input type="checkbox" id="Color" class="dropdown-toggle">
+          <label for="Color" class="dropdown-title">Color</label>
+          <div class="dropdown-content">
+            <label><input type="checkbox">Black <span class="Stock">(5)</span></label>
+            <label><input type="checkbox">Blue <span class="Stock">(4)</span></label>
+            <label><input type="checkbox">Gold <span class="Stock">(1)</span></label>
+            <label><input type="checkbox">Gray <span class="Stock">(4)</span></label>
+            <label><input type="checkbox">Green <span class="Stock">(2)</span></label>
+            <label><input type="checkbox">Magenta <span class="Stock">(4)</span></label>
+            <label><input type="checkbox">Maroon <span class="Stock">(1)</span></label>
+            <label><input type="checkbox">Navy <span class="Stock">(4)</span></label>
+            <label><input type="checkbox">Orange <span class="Stock">(3)</span></label>
+            <label><input type="checkbox">Pink <span class="Stock">(3)</span></label>
+            <label><input type="checkbox">Purple <span class="Stock">(2)</span></label>
+            <label><input type="checkbox">Red <span class="Stock">(1)</span></label>
+            <label><input type="checkbox">Violet <span class="Stock">(3)</span></label>
+            <label><input type="checkbox">White <span class="Stock">(1)</span></label>
+            <label><input type="checkbox">Yellow <span class="Stock">(5)</span></label>
+          </div>
+        </div>
+        <div class="filter-section">
+          <input type="checkbox" id="Materail" class="dropdown-toggle">
+          <label for="Materail" class="dropdown-title">Materail</label>
+          <div class="dropdown-content">
+          <label><input type="checkbox">Fiber <span class="Stock">(3)</span></label>
+          <label><input type="checkbox">Leather <span class="Stock">(3)</span></label>
+          <label><input type="checkbox">Metal <span class="Stock">(3)</span></label>
+          <label><input type="checkbox">Resin <span class="Stock">(3)</span></label>
+          <label><input type="checkbox">Slag <span class="Stock">(3)</span></label>
+          </div>
+        </div>
+        <div class="filter-section">
+          <input type="checkbox" id="Size" class="dropdown-toggle">
+          <label for="Size" class="dropdown-title">Size</label>
+          <div class="dropdown-content">
+            <label><input type="checkbox">S <span class="Stock">(5)</span></label>
+            <label><input type="checkbox">M <span class="Stock">(6)</span></label>
+            <label><input type="checkbox">L <span class="Stock">(6)</span></label>
+            <label><input type="checkbox">XL <span class="Stock">(5)</span></label>
+            <label><input type="checkbox">Xxl <span class="Stock">(2)</span></label>
+          </div>
+        </div>
+      </aside>
+      <div class="arrival-container-2">
+        <div class="arrival-cards-2">
+          <img src="/Users/ahmedsh/Downloads/6_5d039d25-ac5a-4fb2-b65b-0e56408c9215_600x.webp" alt="1">
+          <div class="sale-label-2">
+            -27%
+          </div>
+          <h3>F.V W S PRODUCT </h3>
+          <p class="old-2">75.00$</p>
+          <p class="new-2">55.00$</p>
+        </div>
+        <div class="arrival-cards-2">
+          <img src="/Users/ahmedsh/Downloads/9_68344025-ae14-49f6-b80f-062ccfa1ac2c_600x.webp" alt="2">
+          <h3>L.W S C PRODUCT</h3>
+          <P class="new-2">79.00$</P>
+        </div>
+        <div class="arrival-cards-2">
+          <img src="/Users/ahmedsh/Downloads/7_290bd251-c711-4e03-a13f-20de7d2af09f_600x.webp" alt="3">
+          <div class="sale-label-2">
+            -15%
+          </div>
+          <h3>M.N/S PRODUCT TITLE</h3>
+          <P class="old-2">130.00$</P>
+          <P class="new-2">110.00$</P>
+        </div>
+        <div class="arrival-cards-2">
+          <img src="/Users/ahmedsh/Downloads/11_2140a9ee-d7a9-43f1-9d09-be73bc2065a7_600x.webp" alt="4">
+          <h3>K.P V PRODUCT</h3>
+          <P class="new-2">39.00$</P>
+        </div>
+        <div class="arrival-cards-2">
+          <img src="/Users/ahmedsh/Downloads/3_0c409124-2790-4147-8473-f636f8fbebe0_1024x1024.webp" alt="5">
+          <div class="sale-label-2">
+            -18%
+          </div>
+          <h3>C.V PRODUCT</h3>
+          <P class="old-2">85.00$</P>
+          <P class="new-2">70.00$</P>
+        </div>
+        <div class="arrival-cards-2">
+          <img src="/Users/ahmedsh/Downloads/8_15decc19-4f6c-49e9-885d-e2594d211eb0_600x.webp" alt="6">
+          <div class="sale-label-2">
+            -35%
+          </div>
+          <h3>H.C D PRODUCT</h3>
+          <P class="old-2">60.00$</P>
+          <P class="new-2">39.00$</P>
+        </div>
+        <div class="arrival-cards-2">
+          <img src="/Users/ahmedsh/Downloads/12_f712d06c-f768-4aff-bc8a-968f20be4635_600x.webp" alt="7">
+          <div class="sale-label-2">
+            -11%
+          </div>
+          <h3>L.U C E PRODUCT</h3>
+          <P class="old-2">111.00$</P>
+          <P class="new-2">99.00$</P>
+        </div>
+        <div class="arrival-cards-2">
+          <img src="/Users/ahmedsh/Downloads/4_399323fe-eb0e-4662-b813-a61c23c60fab_600x.webp" alt="8">
+          <div class="sale-label-3">
+            SOLDOUT
+          </div>
+          <h3>D.S O PRODUCT</h3>
+          <P class="old-2">39.00$</P>
+          <P class="new-2">33.00$</P>
+        </div>
+      </div>
+     </main>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>MY ACCOUNT</h3>
           <ul>
             <li>
-              <input type="checkbox" id="in-stock" name="in_stock">
-              In Stock
+              <a href="#">My account</a>
             </li>
             <li>
-              <input type="checkbox" id="out-stock" name="out_stock">
-              out of Stock
+              <a href="#">checkout</a>
+            </li>
+            <li>
+              <a href="#">Contact us</a>
+            </li>
+            <li>
+              <a href="#">Shoping Cart</a>
+            </li>
+            <li>
+              <a href="#">Wishlist</a>
+            </li>
+            <li>
+              <a href="#">About Us</a>
             </li>
           </ul>
         </div>
-        <div class="price-filter">
-          <label>Price</label>
-          <form>
-            <input type="number" name="min_price" placeholder="From $">
-            <input type="number" name="max_price" placeholder="To $">
-            <button type="submit">Filter</button>
-          </form>
+        <div class="footer-column">
+          <h3>QUICK LINKS</h3>
+          <ul>
+            <li>
+              <a href="#">Store Location</a>
+            </li>
+            <li>
+              <a href="#">Ordars Tracking</a>
+            </li>
+            <li>
+              <a href="#">Size Guide</a>
+            </li>
+            <li>
+              <a href="#">My account</a>
+            </li>
+            <li>
+              <a href="#">FAQs</a>
+            </li>
+            <li>
+              <a href="#">Service</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>INFORMATION</h3>
+          <ul>
+            <li>
+              <a href="#">Privecy Page</a>
+            </li>
+            <li>
+              <a href="#">About us</a>
+            </li>
+            <li>
+              <a href="#">Careers</a>
+            </li>
+            <li>
+              <a href="#">Delivery Information</a>
+            </li>
+            <li>
+              <a href="#">faqs</a>
+            </li>
+            <li>
+              <a href="#">Terms & Conditions</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>COMPANY</h3>
+          <ul>
+            <li>
+              <a href="#">Shipping Policy</a>
+            </li>
+            <li>
+              <a href="#">Help & Contact US</a>
+            </li>
+            <li>
+              <a href="#">Returns & Refunds</a>
+            </li>
+            <li>
+              <a href="#">Online Stores</a>
+            </li>
+            <li>
+              <a href="#">Wishlist</a>
+            </li>
+            <li>
+              <a href="#">Terms and Conditions</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column-about-shop">
+          <h3>ABOUT OUR SHOP</h3>
+          <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis repudiandae asperiore architecto odit. Temporibus atque sunt distinctio.</P>
+          <div class="contact-info-1">
+            <p><i class="fas fa-map-marker-alt"></i> Brooklyn, New York, United States</p>
+            <p><i class="fas fa-phone-alt"></i> +0123-456789</p>
+            <p><i class="fas fa-envelope"></i> example@example.com</p>
+          </div>
+          <div class="social-icons-1">
+            <a href="#"><i class="mdi mdi-facebook"></i></a>
+            <a href="#"><i class="mdi mdi-twitter"></i></a>
+            <a href="#"><i class="mdi mdi-instagram"></i></a>
+            <a href="#"><i class="mdi mdi-youtube"></i></a>
+          </div>
         </div>
       </div>
-      <div class="sorting">
-        <label>Sort by</label>
-        <select id="sort_by">
-          <option value="title-ascending">Alphabetically, Z-A</option>
-          <option value="title-descending">Alphabetically, Z-A</option>
-          <option value="price-ascending">Price, low to high</option>
-          <option value="price-descending">Price, low to high</option>
-        </select>
-      </div>
-    </div>
-  </main>
+      <div class="footer-bottom">&copy;All rights Reserved Company 2023</div>
+    </footer>
 </body>
 </html>
